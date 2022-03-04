@@ -42,9 +42,8 @@ public class OperacoesSaudacaoEmprestimo {
 		for (int i = 0; i < meses; i++) {
 
 			parcela = divisao(multiplicacao(valorRestante, 1.05), subtracao(meses,i)); // taxa de 5% ao mês
-			valorFinal = soma(valorFinal, parcela); //
-			valorRestante = subtracao(multiplicacao(valorRestante, 1.05), parcela); // subtrai o valor da parcela do
-																					// valor total com a taxa
+			valorFinal = soma(valorFinal, parcela); // contabiliza o valor pago na parcela ao montate total pago.
+			valorRestante = subtracao(multiplicacao(valorRestante, 1.05), parcela); // subtrai o valor da parcela do valor total com a taxa
 
 			System.out.println("\nParcela " + (i + 1) + ": " + parcela + "\n");
 
